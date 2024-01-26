@@ -1,0 +1,31 @@
+package com.arrays;
+
+public class SelectionSort 
+{
+
+	public static void main(String[] args) 
+	{
+		int [] arr= {100,120,67,1,56};
+		for(int i=0;i<arr.length-1;i++)
+		{
+			int minNumber=arr[i];
+			int minIndex=i;
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[j]<minNumber)
+				{
+					minNumber=arr[j];
+					minIndex=j;
+				}
+			}
+			int temp=arr[i];
+			arr[i]=arr[minIndex];
+			arr[minIndex]=temp;
+		}
+		for (int j : arr) 
+		{
+			System.out.println(j);
+		}
+	}
+
+}
